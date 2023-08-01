@@ -1,37 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".service-content");
-  const upButton = document.querySelector(".prev-button"); // Changed from ".prev-button"
-  const downButton = document.querySelector(".next-button"); // Changed from ".next-button"
+  const upButton = document.querySelector(".prev-button");
+  const downButton = document.querySelector(".next-button");
   const slideCounter = document.querySelector(".slide-counter");
-  let currentSlide = 1;
+  let currentSlide = 0;
 
   function showSlide(n) {
-    if (n > slides.length) {
-      currentSlide = 1;
-    } else if (n < 1) {
-      currentSlide = slides.length;
+    slides[currentSlide].classList.remove("slide-in");
+    slides[currentSlide].classList.add("slide-out");
+
+    currentSlide = n;
+
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+      currentSlide = 0;
     }
 
-    slides.forEach(slide => (slide.style.display = "none"));
-    slides[currentSlide - 1].style.display = "flex";
-    slideCounter.textContent = `${currentSlide}/${slides.length}`;
+    slides[currentSlide].classList.remove("slide-out");
+    slides[currentSlide].classList.add("slide-in");
+    slideCounter.textContent = `${currentSlide + 1}/${slides.length}`;
   }
 
   function showNextSlide() {
-    currentSlide++;
-    showSlide(currentSlide);
+    showSlide(currentSlide + 1);
   }
 
   function showPrevSlide() {
-    currentSlide--;
-    showSlide(currentSlide);
+    showSlide(currentSlide - 1);
   }
 
-  upButton.addEventListener("click", showPrevSlide); // Swap event listeners for up and down buttons
+  upButton.addEventListener("click", showPrevSlide);
   downButton.addEventListener("click", showNextSlide);
+
+  // Hide all slides initially, except the first one
+  for (let i = 1; i < slides.length; i++) {
+    slides[i].classList.add("slide-out");
+  }
 
   showSlide(currentSlide);
 });
-
-
-  
