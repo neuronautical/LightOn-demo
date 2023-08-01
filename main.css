@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out .6s;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333;
+  border-bottom: 3px solid black;
+  color: #fff;
+  z-index: 100;
+  transition: top 0.3s ease-in-out;
+}
+
+.main-header.sticky {
+  position: sticky;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  opacity: 0;
+}
+
+.main-header.sticky.active {
+  position: sticky;
+  z-index: 100;
+  top: 2.5%;
+  width: 84vw;
+  border: 3px solid black;
+  border-radius: 45px;
+  transform: translateX(-9%);
+  transition: top 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.header-logo {
+  height: 130px;
+  width: 130px;
+}
+
+.logo-container {
+  /* border: 3px solid blue; */
+  border-radius: 55px;
+  overflow: hidden;
+  position: relative;
+  left: 10%;
+}
+
+.logo-container img {
+  max-height: 100%;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  padding: 0 15px;
+}
+
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.menu-list li a.active {
+  font-weight: bold;
+}
+
+.contact-container {
+  position: relative;
+  right: 10%;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 3px solid white;
+  border-radius: 45px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  border: 3px solid lime;
+}
+
+.contentContainer {
+  position: relative;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.sectionOne {
+  width: 100vw;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  padding: 50px 50px;
+  width: 38%;
+  top: 30%;
+  left: 5%;
+  color: white;
+}
+
+.calendar {
+  position: absolute;
+  border: 6px solid black;
+  border-radius: 35px;
+  padding: 25px 50px;
+  width: 38%;
+  height: 55%;
+  top: 23%;
+  right: 5%;
+}
+
+.calendly-inline-widget {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.sectionTwo {
+  width: 100vw;
+  height: 100vh;
+}
+
+.imgBoxLeft {
+  position: absolute;
+  border: 9px solid black;
+  border-radius: 155px;
+  padding: 50px 50px;
+  width: 45%;
+  height: 65%;
+  top: 23%;
+  left: 8%;
+  background-image: url(/IMGs/solar-home-dia.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.txtBoxRight {
+  position: absolute;
+  border: 9px solid black;
+  border-radius: 155px;
+  padding: 50px 50px;
+  width: 35%;
+  height: 65%;
+  top: 23%;
+  right: 8%;
+  color: black;
+}
+
+.sectionTre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.textBoxLeft {
+  position: absolute;
+  border: 9px solid black;
+  border-radius: 155px;
+  padding: 50px 50px;
+  width: 35%;
+  height: 65%;
+  top: 23%;
+  left: 8%;
+  color: black;
+}
+
+.imgBoxRight {
+  position: absolute;
+  border: 9px solid black;
+  border-radius: 155px;
+  padding: 50px 50px;
+  width: 45%;
+  height: 65%;
+  top: 23%;
+  right: 8%;
+  background-image: url(/IMGs/solar-home-dia.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#section1 {
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#section2 {
+  background-color: #222;
+}
+
+#section3 {
+  background-color: #222;
+}
+
+#section4 {
+  height: 25vh !important;
+  background-color: purple;
+}
+
+.mainFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25vh;
+  background-color: #111;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  color: white;
+  z-index: 1;
+}
+
+
+  
