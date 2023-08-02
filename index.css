@@ -4,6 +4,31 @@
   color: white;
 }
 
+
+
+
+
+
+
+
+.calendly-inline-widget {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+
+#firstImg {
+  background: none;
+  border: none;
+}
+
+
+#firstTxt {
+  border: none;
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
