@@ -5,9 +5,48 @@
 }
 
 
+.calendly-inline-widget {
+  display: none;
+  width: 200px !important;
+  height: 200px !important;
+}
+
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* ... other styles ... */
+}
 
 
 
+#showCalendly {
+  border: 3px solid white !important;
+  border-radius: 35px;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 15px 20px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+
+#showCalendly:hover {
+  border: 3px solid lime !important;
+  cursor: pointer;
+}
+
+
+
+
+.imgBoxRight#firstImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ... other styles ... */
+}
 
 
 
@@ -28,7 +67,10 @@
 }
 
 
-
+.service-description {
+  position: absolute;
+  top: 25% !important;
+}
 body {
   margin: 0;
   padding: 0;

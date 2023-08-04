@@ -77,3 +77,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showSlide(currentSlide);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const widgetContainer = document.querySelector(".widget-container");
+  const calendlyWidget = document.querySelector(".calendly-inline-widget");
+  const showCalendlyButton = document.querySelector("#showCalendly");
+
+  // Show or hide the Calendly widget and widget container
+  function toggleCalendly() {
+    if (calendlyWidget.style.display === "none") {
+      calendlyWidget.style.display = "flex";
+      widgetContainer.style.display = "none";
+    } else {
+      calendlyWidget.style.display = "none";
+      widgetContainer.style.display = "flex";
+    }
+  }
+
+  // Attach a click event listener to the "Schedule Consultation" button
+  showCalendlyButton.addEventListener("click", toggleCalendly);
+});
+

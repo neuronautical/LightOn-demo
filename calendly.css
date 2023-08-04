@@ -1,9 +1,12 @@
 .calendly-inline-widget,.calendly-inline-widget *,.calendly-badge-widget,.calendly-badge-widget *,.calendly-overlay,.calendly-overlay * {
+
     position: fixed;
     /* top: -5%; */
     font-size: 16px;
     line-height: 1.2em;
 }
+
+
 
 .calendly-inline-widget iframe,.calendly-badge-widget iframe,.calendly-overlay ifram {
     position: absolute;
