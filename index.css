@@ -20,6 +20,10 @@
   /* ... other styles ... */
 }
 
+.widget-text {
+  font-style: italic;
+}
+
 
 
 #showCalendly {
